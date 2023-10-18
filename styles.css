@@ -1,0 +1,232 @@
+* {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ae424200;
+  margin: 2rem 2rem 2rem 2rem
+}
+
+:root {
+  --color-primary: #c484cc;
+  --background: #3f2d41;
+}
+
+/* nav bar*/
+
+nav {
+  position: relative;
+  background: var(--background);
+  font-weight: 400;
+  font-size: 0;
+  display: flex;
+  padding: 0;
+  width: 100%;
+}
+
+nav .item {
+  font-size: 0.8rem;
+  display: inline-block;
+  position: relative;
+  padding: 0 20px;
+  cursor: pointer;
+  z-index: 5;
+  min-width: 25%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+nav .item:hover{
+  background: #722c7c;
+}
+
+.underline {
+  height: 6px;
+  background: var(--color-primary);
+  position: absolute;
+  bottom: 0;
+  width: 25%;
+  z-index: 2;
+  pointer-events: none;
+  transition: 0.35s;
+}
+
+nav .item:nth-child(1):hover ~ .underline {
+  transform: translate(0, 0);
+}
+
+nav .item:nth-child(2):hover ~ .underline {
+  transform: translate(100%, 0);
+}
+
+nav .item:nth-child(3):hover ~ .underline {
+  transform: translate(200%, 0);
+}
+
+nav .item:nth-child(4):hover ~ .underline {
+  transform: translate(300%, 0);
+}
+
+/* main body banner*/
+
+.banner {
+  width: 100%;
+  height: 35%;
+  min-height: 30%;
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/78/Sheringham_Park_1.JPG");
+  background-size: cover;
+  align-items: end;
+}
+
+.info {
+  text-align: center;
+  font-size: 1.25rem;
+  color: black;
+  font-weight: 800;
+  z-index: 2;
+  text-decoration: solid;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+img {
+  width: 15%;
+  height: auto;
+  margin: 2%;
+}
+
+header img{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*extra info, flexbox */
+
+.grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  
+  @media(max-width: 600px){
+    display:block;
+  }
+}
+
+.column {
+  margin: 1em;
+  
+  @media(max-width: 600px){
+    width: calc(33.33% - 2em);
+  }
+  @media(min-width: 720px){
+    width: calc(33.33% - 2em);
+  }
+  @media(min-width: 1200px){
+    width: calc(25% - 2em);
+  }
+}
+
+.thumbnail {
+  height: 100%;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 20%;
+}
+
+.caption {
+  text-align: center;
+  line-height: 2;
+}
+
+.caption h3 {
+  text-decoration: underline;
+}
+
+/* footer */
+
+footer {
+  display: flex;
+}
+
+footer div {
+  flex: 1;
+}
+
+footer {
+  height: 15%;
+  display: flex;
+}
+.copyright {
+  background: var(--background);
+  height: 60px;
+  display: flex;
+}
+
+.social {
+  background-color: white;
+  height: 60px;
+  text-align: center;
+}
+
+.social a:hover{
+  background-color: #222;
+}
+
+.support {
+  background-color: #6dcd9a;
+  font-size: 1em;
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  float: left;
+  font-weight: bold;
+  padding-top:5%;
+}
+
+.linked {
+background-color: #1E83AE;
+color: white;
+font-weight: bold;
+font-size: 1.2em;
+width: 20%;
+height: 100%;
+padding: 2.25%;
+float: right;
+text-align: center;
+padding-top:5%;
+}
+
+.tweet{
+  background-color: #3DACDD;
+  color: white;
+  font-size: 1.2em;
+  width: 20%;
+  height: 100%;
+  padding: 2.25%;
+  text-align: center;
+  float: right;
+  padding-top:5%;
+}
+
+.face{
+  background-color: #3D5B94;
+  color: white;
+  font-size: 1.2em;
+  width: 20%;
+  height: 100%;
+  padding: 2.25%;
+  text-align: center;
+  float: right;
+  padding-top:5%;
+}
