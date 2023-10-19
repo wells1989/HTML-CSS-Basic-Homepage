@@ -4,6 +4,6 @@ This mini project was an assignment at the end of the HTML / CSS in depth course
 
 ## Homepage screenshots
 
-![Screenshot (402)](https://github.com/wells1989/HTML-CSS-Basic-Homepage/assets/122035759/e0a6b276-177d-4b76-af8c-0a9f84166a3e)
+![Screenshot (401)](https://github.com/wells1989/HTML-CSS-Basic-Homepage/assets/122035759/aedbb3b6-30e3-4e57-8c78-db2f3e8e8da3)
 
-![Screenshot (392)](https://github.com/wells1989/HTML-CSS-Basic-Homepage/assets/122035759/adecf23e-b7d8-40b4-b1f3-4473fdaba6cc)
+![Screenshot (402)](https://github.com/wells1989/HTML-CSS-Basic-Homepage/assets/122035759/e0a6b276-177d-4b76-af8c-0a9f84166a3e)
