@@ -17,7 +17,7 @@ body {
 
 nav {
   position: relative;
-  background: var(--background);
+  background: #3f2d41;
   font-weight: 400;
   font-size: 0;
   display: flex;
@@ -38,8 +38,34 @@ nav .item {
   text-align: center;
 }
 
-nav .item:hover{
-  background: #722c7c;
+.dropdown {
+  overflow: hidden;
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  left: 0;
+  top: 62px;
+}
+.dropdown > div {
+  transform: translate(0, -100%);
+  transition: all 0.5s 0.1s;
+  position: relative;
+}
+
+.dropdown a {
+  display: block;
+  padding: 0;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  background: var(--color-primary);
+  color:white;
+}
+
+.dropdown a:hover {
+  background: #a567ad;
+  font-weight: 800;
 }
 
 .underline {
@@ -51,6 +77,10 @@ nav .item:hover{
   z-index: 2;
   pointer-events: none;
   transition: 0.35s;
+}
+
+nav .item:hover > .dropdown > div {
+  transform: translate(0);
 }
 
 nav .item:nth-child(1):hover ~ .underline {
@@ -78,6 +108,7 @@ nav .item:nth-child(4):hover ~ .underline {
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/7/78/Sheringham_Park_1.JPG");
   background-size: cover;
   align-items: end;
+  border-radius: 5%;
 }
 
 .info {
@@ -123,6 +154,8 @@ header img{
 
 .column {
   margin: 1em;
+  background-color: #3f2d41;;
+  border-radius: 5%;
   
   @media(max-width: 600px){
     width: calc(33.33% - 2em);
@@ -133,6 +166,12 @@ header img{
   @media(min-width: 1200px){
     width: calc(25% - 2em);
   }
+}
+
+.column h3:hover {
+    background: #722c7c;
+    font-weight: bold;
+    cursor:pointer;
 }
 
 .thumbnail {
@@ -168,65 +207,10 @@ footer {
   display: flex;
 }
 .copyright {
-  background: var(--background);
-  height: 60px;
+  border: 1px solid var(--background);
+  border-radius: 15%;
+  width: 80%;
+  height: 80px;
   display: flex;
-}
-
-.social {
-  background-color: white;
-  height: 60px;
-  text-align: center;
-}
-
-.social a:hover{
-  background-color: #222;
-}
-
-.support {
-  background-color: #6dcd9a;
-  font-size: 1em;
-  width: 40%;
-  height: 100%;
-  text-align: center;
-  float: left;
-  font-weight: bold;
-  padding-top:5%;
-}
-
-.linked {
-background-color: #1E83AE;
-color: white;
-font-weight: bold;
-font-size: 1.2em;
-width: 20%;
-height: 100%;
-padding: 2.25%;
-float: right;
-text-align: center;
-padding-top:5%;
-}
-
-.tweet{
-  background-color: #3DACDD;
-  color: white;
-  font-size: 1.2em;
-  width: 20%;
-  height: 100%;
-  padding: 2.25%;
-  text-align: center;
-  float: right;
-  padding-top:5%;
-}
-
-.face{
-  background-color: #3D5B94;
-  color: white;
-  font-size: 1.2em;
-  width: 20%;
-  height: 100%;
-  padding: 2.25%;
-  text-align: center;
-  float: right;
-  padding-top:5%;
+  justify-content: space-between;
 }
